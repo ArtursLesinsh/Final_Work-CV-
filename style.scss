@@ -26,7 +26,6 @@ p {
 
 .top_header {
     border-bottom: 1px solid rgba(190, 10, 10, 0.928);
-   
 }
 
 .top_menu {
@@ -37,7 +36,7 @@ p {
     max-width: pxToRem(1100);
     margin: auto;
     height: pxToRem(70);
-    background-color: rgb(25, 199, 46);
+    background-color: #88CC88;
 }
 
 .logo {
@@ -66,20 +65,24 @@ section, footer {
   padding: pxToRem(70) pxToRem(15);
   box-sizing: border-box;
   margin: auto;
-  background: pink;
+  background: #FFE09C;
   padding: pxToRem(20) pxToRem(20);
 }
 
-.my_photo {
-    padding: pxToRem(20);
-}
-
 .about_me {
-    background: rgba(0, 167, 153, 0.658);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
+
+.my_photo {
+  padding: pxToRem(20);
+  float: left;
+}
+
+// .about_text {
+//   float: left;
+// }
 
 // Hobbies -->
 
@@ -88,7 +91,6 @@ section, footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 167, 153, 0.658);
     flex-wrap: wrap;
     display: flex;
   }
@@ -129,10 +131,11 @@ section, footer {
 
   // Education -->
 
-  .education {
+  #education {
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
+    background: #FFE09C;
   }
 
   .education_container {
@@ -206,9 +209,9 @@ section, footer {
     left: 0;
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: #7BC880;
     box-sizing: border-box;
-    color: #ffffff;
+    color: #000000;
     opacity: 0;
   }
   
@@ -221,7 +224,7 @@ section, footer {
 
   //  Work experiance -->
 
-  .work {
+  #work {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -251,4 +254,111 @@ section, footer {
     text-align: left;
   }
 
+  /* Footer */
   
+  .template {
+    display:none;
+}
+
+form {
+    background:#ffffff;
+    display: flex;
+    flex-direction:column;
+    margin:auto;
+    max-width:25rem;
+    padding:1rem;
+    border-radius: 0.25rem;
+    margin-bottom:20px;
+}
+input[type=text], textarea {
+    margin-bottom:20px;
+    background: #fff6c2;
+    border: 3px solid rgb(237, 209, 31);
+    border-radius: 0.25rem;
+    padding:8px;
+    font-family: Cousine;
+}
+input[type=email], textarea {
+  margin-bottom:20px;
+  background: #fff6c2;
+  border: 3px solid rgb(237, 209, 31);
+  border-radius: 0.25rem;
+  padding:8px;
+  font-family: Cousine;
+}
+
+#comments_form textarea {
+    resize: vertical;
+    font-family: Cousine;
+}
+
+button {
+    background: rgb(237, 209, 31);
+    border-radius: 0.25rem;
+    border:0;
+    padding:8px;
+    font-family: Cousine;
+}
+
+.comment_first_block {
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:2rem;
+
+    .message {
+        margin:0;
+        white-space: pre;
+    }
+}
+
+.comments {
+    background: #7180AC;
+    margin:auto;
+    max-width:25rem;
+    padding:1rem;
+}
+
+.comments__entry {
+    border-bottom: 1px solid rgb(100, 87, 126);
+    padding: 0.25rem;
+
+    .author {
+        display:block;
+        text-align:right;
+    }
+}
+
+.comments__entry:last-child {
+    border:0;
+}
+
+.footer_icons {
+  display: flex;
+  justify-content: center;
+}
+
+.footer_icons > a {
+  display: flex;
+  margin: 10px;
+  text-decoration: none;
+  align-items: center;
+  color: #000000;
+  font-family: Cousine;
+}
+
+
+/* Arrow */
+  .arrow_top {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 0 0 0;
+    text-decoration: none;
+    transform: rotate(180deg);
+    position: fixed;
+    bottom: 40px;
+    right: 15px;
+  }

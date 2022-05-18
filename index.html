@@ -15,9 +15,9 @@
               </div>
               <div class="top_navigation" >
                   <a class="top_button" href="#">About me</a>
-                  <a class="top_button" href="#">Education</a>
-                  <a class="top_button" href="#">Work experiance</a>
-                  <a class="top_button" href="#">Contacts</a>
+                  <a class="top_button" href="#education">Education</a>
+                  <a class="top_button" href="#work">Work experiance</a>
+                  <a class="top_button" href="#footer">Contacts</a>
               </div>
           </div>
       </div>
@@ -27,11 +27,11 @@
 
         <section class="about_me">
             <!-- <div class="about_photo"> -->
-                <img class="my_photo" src="images/my_photo1.png" alt="">
+                <!-- <img class="my_photo" src="images/my_photo1.png" alt=""> -->
             <!-- </div> -->
             <div class="about_text">
                 <h1>Something about me</h1>
-                <p>I was born in Riga, in 1990, and all my life I live here and don’t want to change living place.</p>
+                <p><img class="my_photo" src="images/my_photo1.png" alt="">I was born in Riga, in 1990, and all my life I live here and don’t want to change living place.</p>
                 <p>In my early 30th years, I decided to change not only job, but profession, because my previous job didn’t gave me any satisfaction.
                     Why I choose exactly it WEB-development? I just sow on YouTube some video about how WEB-page was made, and I really liked the idea, that basically, you made a WEB-“painting” using only words and numbers, and I liked this idea and I want to move in that direction,
                     of course after the course start I realised that there is some others thing which you need to learn, but that okay.</p> 
@@ -93,7 +93,7 @@
 
 <!-- Education -->
 
-        <section class="education">
+        <section id="education">
           <h2>Education/course</h2>
           <div class="education_container">
             <ul>
@@ -135,7 +135,7 @@
         
         <!-- Work experiance -->
 
-        <section class="work">
+        <section id="work">
           <h2>Work experiance</h2>
           <div class="work_container">
             <div class="work_experiance">
@@ -172,7 +172,33 @@
         </div>
         </section>
 
-        <footer></footer>
+        <!-- Contacts -->
+
+        <footer id="footer">
+          <h3>Contacts</h3>
+          <form action="api.php?name=add-comment" id="comments_form">
+            <input type="text" name="author" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" rows="5" placeholder="Comment Message" required></textarea>
+            <button type="submit">comment</button>
+        </form>
+        
+        <div class="comments">
+            <div class="comments__entry template">
+                <div class="comment_first_block">
+                    <p class="message"></p>
+                    <a href="#" class="delete">delete</a>
+                </div>
+                <strong class="author"></strong>
+            </div>
+        </div>
+        <div class="footer_icons">
+            <a href="https://www.facebook.com/artur.lesinsh" target="blank" title="facebook"><img src="images/icons/facebook.png" alt=""></a>
+            <a href="https://www.linkedin.com/in/arthur-lesinsh-022631163" target="blank" title="linkedin"> <img src="images/icons/linkedin.png" alt=""></a>
+            <a href=""> <img src="images/icons/phone-call.png" alt="">+37128451697</a>
+      </div>
+        </footer>
+        <a class="arrow_top icon-home" href="#" ><img src="images/icons/down-arrow.png" alt=""></a>
     </main>
 </body>
 </html>
