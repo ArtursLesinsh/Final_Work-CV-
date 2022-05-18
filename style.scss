@@ -43,7 +43,9 @@ p {
     max-width: pxToRem(230);
     width: 100%;
 }
-
+.toggle {
+  display: none;
+}
 .top_button {
     font-family: Cousine;
     font-size: pxToRem(18);
@@ -79,10 +81,6 @@ section, footer {
   padding: pxToRem(20);
   float: left;
 }
-
-// .about_text {
-//   float: left;
-// }
 
 // Hobbies -->
 
@@ -234,16 +232,14 @@ section, footer {
     display: flex;
     justify-content: space-around;
   }
-  span {
-    background-color: black;
-    height: 1px;
-    width: 100px;
-    position: absolute;
-    left: 10px;
-  }
+  // span {
+  //   background-color: black;
+  //   height: 1px;
+  //   width: 100px;
+  //   left: 10px;
+  // }
 
   .work_experiance {
-    position: relative;
     border: 1px solid #000000;
     margin: 10px;
   }
@@ -361,4 +357,39 @@ button {
     position: fixed;
     bottom: 40px;
     right: 15px;
+  }
+
+  @media only screen and (max-width: 770px) { 
+    .top_menu > .top_navigation {
+      display: none;
+    }
+    .toggle {
+      display: flex;
+      cursor: pointer;
+    }
+    .toggle::before {
+      content: url(images/icons/list.png);
+      margin: auto;
+      padding-right: 10px;
+    }
+    .toggle.open::before {
+      content: url(images/icons/cancel32.png);
+    }
+
+    .toggle.open > h2{
+      display: none;
+    }
+    .top_navigation.open {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      height: 30px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.801);
+      display: flex;
+      justify-content: space-around;
+      // flex-direction: column;
+      overflow: auto;
+      padding-top: 10px;
+    }
   }
