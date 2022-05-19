@@ -146,7 +146,7 @@ section, footer {
   .education_icons {
     padding-bottom: pxToRem(5);
   }
-  .education_icons_1 {
+  .hide_icons {
     display: none;
   }
 
@@ -250,8 +250,15 @@ button {
   display: flex;
   justify-content: center;
 }
-
-.footer_icons > a {
+.footer_hide {
+  display: none;
+  margin: pxToRem(10);
+  text-decoration: none;
+  align-items: center;
+  color: #000000;
+  font-family: Cousine;
+}
+.footer_ic  {
   display: flex;
   margin: pxToRem(10);
   text-decoration: none;
@@ -259,6 +266,7 @@ button {
   color: #000000;
   font-family: Cousine;
 }
+
 
 /* -- Arrow -- */
   .arrow_top {
@@ -323,11 +331,11 @@ button {
       align-content: center;
   }
 
-  .photo {
+    .photo {
     display: flex;
     justify-content: center;
   }
-  .my_photo {
+    .my_photo {
     float: none;
   }
 
@@ -350,10 +358,29 @@ button {
     .education_content {
       width: 100%;
     }
+    .main_icons {
+      display: none;
+    }
+    .education_icons {
+      display: flex;
+      margin: auto;
+      justify-content: center;
+    }
+    .hide_icons {
+      display: flex;
+    }
 
     .work_container {
       flex-direction: column;
     }
+
+    .footer_ic {
+      display: none;
+  }
+    .footer_hide {
+      display: flex;
+    }
+
   }
 
   @media only screen and (max-width: 430px) {
