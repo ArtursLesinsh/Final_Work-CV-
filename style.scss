@@ -22,7 +22,7 @@ p {
     font-family: Cousine;
 }
 
-// Top header -->
+/* -- Top header -- */
 
 .top_header {
     border-bottom: 1px solid rgba(190, 10, 10, 0.928);
@@ -73,7 +73,7 @@ section, footer {
   padding: pxToRem(20) pxToRem(20);
 }
 
-/* About me */
+/* -- About me -- */
 
 .about_me {
     display: flex;
@@ -87,7 +87,7 @@ section, footer {
 .my_text {
   text-align: center;
 }
-// Hobbies -->
+/* -- Hobbies -- */
 
 #hobbies {
     flex-direction: column;
@@ -115,7 +115,7 @@ section, footer {
     text-align: center;
   }
 
-  // Education -->
+  /* -- Education -- */
 
   #education {
     display: flex;
@@ -146,8 +146,11 @@ section, footer {
   .education_icons {
     padding-bottom: pxToRem(5);
   }
+  .education_icons_1 {
+    display: none;
+  }
 
-  //  Work experiance -->
+  /* -- Work experiance -- */
 
   #work {
     display: flex;
@@ -156,8 +159,8 @@ section, footer {
   }
 
   .work_container {
-    display: flex;
-    justify-content: space-around;
+      display: flex;
+      justify-content: space-around;
   }
 
   .work_experiance {
@@ -165,13 +168,7 @@ section, footer {
     margin: pxToRem(10);
   }
 
-  .work_text {
-    padding: pxToRem(1) 0 0 pxToRem(5);
-    font-size: pxToRem(14);
-    text-align: left;
-  }
-
-  /* Footer */
+  /* -- Footer -- */
   
   .template {
     display:none;
@@ -263,8 +260,7 @@ button {
   font-family: Cousine;
 }
 
-
-/* Arrow */
+/* -- Arrow -- */
   .arrow_top {
     display: inline-block;
     width: pxToRem(30);
@@ -279,6 +275,8 @@ button {
     bottom: pxToRem(40);
     right: pxToRem(15);
   }
+
+  /* -- Media -- */
 
   @media only screen and (max-width: 780px) { 
     .top_menu > .top_navigation {
@@ -311,5 +309,61 @@ button {
       justify-content: space-around;
       overflow: auto;
       padding-top: pxToRem(10);
+    }
+  }
+
+  @media only screen and (max-width: 620px) {
+
+    html {
+      font-size: 14px;
+    }
+
+    .about_me {
+      flex-wrap: wrap;
+      align-content: center;
+  }
+
+  .photo {
+    display: flex;
+    justify-content: center;
+  }
+  .my_photo {
+    float: none;
+  }
+
+  }
+
+  @media only screen and (max-width: 540px) {
+
+    .top_navigation.open {
+      flex-direction: column;
+      height: pxToRem(120);
+      align-items: center;
+    }
+    .toggle::before {
+      content: url(images/icons24px/list24.png);
+    }
+    .toggle.open::before {
+      content: url(images/icons24px/cancel24.png);
+    }
+
+    .education_content {
+      width: 100%;
+    }
+
+    .work_container {
+      flex-direction: column;
+    }
+  }
+
+  @media only screen and (max-width: 430px) {
+    html {
+      font-size: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 370px) {
+    html {
+      font-size: 10px;
     }
   }
