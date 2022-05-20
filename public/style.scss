@@ -162,7 +162,6 @@ section, footer {
   }
 
   .work_container {
-    
       display: flex;
       justify-content: space-around;
   }
@@ -180,6 +179,7 @@ section, footer {
 }
 
 .delete {
+  text-decoration: none;
   font-size: pxToRem(12);
 }
 
@@ -188,16 +188,16 @@ form {
     display: flex;
     flex-direction:column;
     margin:auto;
-    max-width:25rem;
-    padding:1rem;
-    border-radius: 0.25rem;
-    margin-bottom:pxToRem(20);
+    max-width:pxToRem(400);
+    padding:pxToRem(16);
+    border-radius: pxToRem(5);
+    margin-bottom: pxToRem(20);
 }
 input[type=text], textarea {
     margin-bottom:pxToRem(20);
     background: #fff6c2;
     border: 3px solid rgb(237, 209, 31);
-    border-radius: 0.25rem;
+    border-radius: pxToRem(5);
     padding:pxToRem(8);
     font-family: Cousine;
 }
@@ -205,7 +205,7 @@ input[type=email], textarea {
   margin-bottom:pxToRem(20);
   background: #fff6c2;
   border: 3px solid rgb(237, 209, 31);
-  border-radius: 0.25rem;
+  border-radius: pxToRem(5);
   padding:pxToRem(8);
   font-family: Cousine;
 }
@@ -217,7 +217,7 @@ input[type=email], textarea {
 
 button {
     background: rgb(237, 209, 31);
-    border-radius: 0.25rem;
+    border-radius: pxToRem(5);
     border:0;
     padding:pxToRem(8);
     font-family: Cousine;
@@ -226,7 +226,7 @@ button {
 .comment_first_block {
     display:flex;
     justify-content:space-between;
-    margin-bottom:2rem;
+    margin-bottom: pxToRem(32);
 
     .message {
         margin:0;
@@ -235,16 +235,17 @@ button {
     }
 }
 
+
 .comments {
     background: #7180AC;
     margin:auto;
-    max-width:25rem;
+    max-width: pxToRem(400);
     padding:1rem;
 }
 
 .comments__entry {
     border-bottom: 1px solid rgb(100, 87, 126);
-    padding: 0.25rem;
+    padding: pxToRem(5);
 
     .author {
         display:block;

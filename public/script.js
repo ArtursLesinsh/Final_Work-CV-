@@ -4,14 +4,18 @@ const comment_template = comment_block.querySelector('.template');
 
 form.onsubmit = function (event) {
     event.preventDefault();
-    const data = new FormData(this);
-    addComment(data.get('author'), data.get('message'), data.get('phone_number'), data.get('email'))
-}
+    xhttp.postForm(this, function (response) {
+        addComment(response.author, response.message, response.phone_number, response.email);
+    });
+};
 
 function addComment(author, message, phone_number, email) {
     const new_comment = comment_template.cloneNode(true);
     new_comment.classList.remove('template');
     new_comment.querySelector('.message').textContent = message;
+    new_comment.querySelector('.author').textContent = author;
+    new_comment.querySelector('.phone_number').textContent = phone_number;
+    new_comment.querySelector('.email').textContent = email;
 
     comment_block.append(new_comment)
 }
