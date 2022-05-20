@@ -170,15 +170,16 @@
         <!-- Contacts -->
 
         <footer id="footer">
-          <h3>Contacts</h3>
-          <h4>Contact form</h4>
+          <h3>Contact form</h3>
+
           <form action="api.php?name=add-comment" id="comments_form">
               <input type="text" name="author" placeholder="Name" required>
               <input type="email" name="email" placeholder="Email" required>
-              <textarea name="phone number" rows="1" placeholder="Phone number" required></textarea>
+              <textarea name="phone_number" rows="1" placeholder="Phone number" required></textarea>
               <textarea name="message" rows="5" placeholder="Comment Message" required></textarea>
               <button type="submit">comment</button>
           </form>
+
         <div class="comments">
             <div class="comments__entry template">
                 <div class="comment_first_block">
@@ -188,6 +189,7 @@
                 <strong class="author"></strong>
             </div>
         </div>
+        
         <div class="footer_icons">
             <a class="footer_ic" href="https://www.facebook.com/artur.lesinsh" target="blank" title="facebook"><img src="images/icons/facebook.png" alt=""></a>
             <a class="footer_hide" href="https://www.facebook.com/artur.lesinsh" target="blank" title="facebook"><img src="images/icons24px/facebook24.png" alt=""></a>
@@ -199,5 +201,8 @@
         </footer>
         <a class="arrow_top icon-home" href="#" ><img src="images/icons/down-arrow.png" alt=""></a>
     </main>
+
+    <script src="script.js"></script>
+
 </body>
 </html>

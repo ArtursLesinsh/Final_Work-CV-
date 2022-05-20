@@ -179,6 +179,10 @@ section, footer {
     display:none;
 }
 
+.delete {
+  font-size: pxToRem(12);
+}
+
 form {
     background: #7180AC;
     display: flex;
@@ -227,6 +231,7 @@ button {
     .message {
         margin:0;
         white-space: pre;
+        font-size: pxToRem(12);
     }
 }
 
