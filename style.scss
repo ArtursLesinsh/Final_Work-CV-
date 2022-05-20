@@ -81,11 +81,13 @@ section, footer {
 }
 
 .my_photo {
-  padding: 0 pxToRem(20);
+  padding: 0 0 0 pxToRem(20);
   float: right;
 }
 .my_text {
-  text-align: center;
+
+  background: #7180AC;
+  text-align: left;
 }
 /* -- Hobbies -- */
 
@@ -133,6 +135,7 @@ section, footer {
   }
 
   .education_content {
+    background: #7180AC;
     border: 1px solid #7180AC;
     display: flex;
     width: 45%;
@@ -159,23 +162,30 @@ section, footer {
   }
 
   .work_container {
+    
       display: flex;
       justify-content: space-around;
   }
 
   .work_experiance {
+    background: #7180AC;
     border: 1px solid #7180AC;
     margin: pxToRem(10);
   }
 
   /* -- Footer -- */
+
+  .footer_text {
+    background: #7180AC;
+    text-align: center;
+  }
   
   .template {
     display:none;
 }
 
 form {
-    background:#ffffff;
+  background: #7180AC;
     display: flex;
     flex-direction:column;
     margin:auto;
