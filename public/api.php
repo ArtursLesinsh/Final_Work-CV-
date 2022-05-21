@@ -14,14 +14,14 @@ if (isset($_GET['name']) && is_string($_GET['name'])) {
             isset($_POST['phone_number']) && is_string($_POST['phone_number']) &&
             isset($_POST['email']) && is_string($_POST['email']) 
         ) {
-            $db = new DB('comments');
+            $comment_manager = new DB('comments');
             $outpout = [
                 'status' => true,
                 'author' => $_POST['author'],
                 'message' => $_POST['message'],
                 'phone_number' => $_POST['phone_number'],
                 'email' => $_POST['email'],
-                'id' => $db->addEntry([
+                'id' => $comment_manager->addEntry([
                     'author' => $_POST['author'],
                     'message' => $_POST['message'],
                     'phone_number' => $_POST['phone_number'],
@@ -32,20 +32,20 @@ if (isset($_GET['name']) && is_string($_GET['name'])) {
         }
     }
     elseif ($_GET['name'] === 'get-comments') {
-        $db = new DB('comments');
+        $comment_manager = new DB('comments');
         $outpout = [
             'status' => true,
-            'comments' =>$db->getAll()
+            'comments' =>$comment_manager->getAll()
         ];
     }
 
     elseif ($_GET['name'] === 'delete-comment') {
         if (isset($_POST['id']) && is_string($_POST['id'])) {
-            $db = new DB('comments');
+            $comment_manager = new DB('comments');
             $id = (int) $_POST['id'];
 
             $outpout = [
-                'status' => $db->deleteEntry($id),
+                'status' => $comment_manager->deleteEntry($id),
                 'id' => $id,
             ];
         }

@@ -5,7 +5,7 @@ class DB
 {
     private $table_name = null;
     private $connection = null;
-    public function __construct ($table_name) {
+    public function __construct (string $table_name) {
         $this->table_name = $table_name;
         $servername = "localhost";
         $username = "root";
@@ -23,7 +23,7 @@ class DB
         $this->$connection->close();
     }
 
-    public function addEntry($entry) {
+    public function addEntry(array $entry) {
         $column_str = '';
         $value_str = '';
         foreach ($entry as $key => $value) {
