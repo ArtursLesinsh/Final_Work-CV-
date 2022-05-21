@@ -14,17 +14,29 @@ if (isset($_GET['name']) && is_string($_GET['name'])) {
             isset($_POST['phone_number']) && is_string($_POST['phone_number']) &&
             isset($_POST['email']) && is_string($_POST['email']) 
         ) {
-            $db = new DB();
+            $db = new DB('comments');
             $outpout = [
                 'status' => true,
                 'author' => $_POST['author'],
                 'message' => $_POST['message'],
                 'phone_number' => $_POST['phone_number'],
                 'email' => $_POST['email'],
-                'test' =>$db->addEntry($_POST)
+                'id' => $db->addEntry([
+                    'author' => $_POST['author'],
+                    'message' => $_POST['message'],
+                    'phone_number' => $_POST['phone_number'],
+                    'email' => $_POST['email']
+                ]),
             ];
 
         }
+    }
+    elseif ($_GET['name'] === 'get-comments') {
+        $db = new DB('comments');
+        $outpout = [
+            'status' => true,
+            'comments' =>$db->getAll()
+        ];
     }
 }
 
