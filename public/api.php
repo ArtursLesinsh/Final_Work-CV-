@@ -38,6 +38,18 @@ if (isset($_GET['name']) && is_string($_GET['name'])) {
             'comments' =>$db->getAll()
         ];
     }
+
+    elseif ($_GET['name'] === 'delete-comment') {
+        if (isset($_POST['id']) && is_string($_POST['id'])) {
+            $db = new DB('comments');
+            $id = (int) $_POST['id'];
+
+            $outpout = [
+                'status' => $db->deleteEntry($id),
+                'id' => $id,
+            ];
+        }
+    }
 }
 
 echo json_encode($outpout, JSON_PRETTY_PRINT);

@@ -12,10 +12,8 @@ class DB
         $password = "root";
         $dbname = "bootcamp1990";
 
-        // Create connection
         $this->conn = new \mysqli($servername, $username, $password, $dbname);
-        
-        // Check connection
+
         if ($this->conn->connect_error) {
             die("Connection failed: " . $this->conn->connect_error);
         }    
@@ -26,9 +24,6 @@ class DB
     }
 
     public function addEntry($entry) {
-        // $sql = "INSERT INTO " . $this->table_name . " (author, message, email, phone number)
-        // VALUES ('John', 'Doe', 'john@example.com', '34 56 84 93')";
-
         $column_str = '';
         $value_str = '';
         foreach ($entry as $key => $value) {
@@ -52,5 +47,11 @@ class DB
         $result = $this->conn->query($sql);
 
         return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function deleteEntry(int $id) {
+        $sql = "DELETE FROM " . $this->table_name . " WHERE id=" . $id;
+
+        return ($this->conn->query($sql) === true);
     }
 }
