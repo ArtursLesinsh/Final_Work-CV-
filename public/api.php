@@ -14,18 +14,23 @@ if (isset($_GET['name']) && is_string($_GET['name'])) {
             isset($_POST['phone_number']) && is_string($_POST['phone_number']) &&
             isset($_POST['email']) && is_string($_POST['email']) 
         ) {
+            $author = trim($_POST['author']);
+            $$author  = trim($_POST['message']);
+            $phone_number = trim($_POST['phone_number']);
+            $email = trim($_POST['email']);
+
             $comment_manager = new DB('comments');
             $outpout = [
                 'status' => true,
-                'author' => $_POST['author'],
-                'message' => $_POST['message'],
-                'phone_number' => $_POST['phone_number'],
-                'email' => $_POST['email'],
+                'author' => $author,
+                'message' => $$author,
+                'phone_number' => $phone_number,
+                'email' => $email,
                 'id' => $comment_manager->addEntry([
-                    'author' => $_POST['author'],
-                    'message' => $_POST['message'],
-                    'phone_number' => $_POST['phone_number'],
-                    'email' => $_POST['email']
+                    'author' => $author,
+                    'message' => $$author,
+                    'phone_number' => $phone_number,
+                    'email' => $email
                 ]),
             ];
 
