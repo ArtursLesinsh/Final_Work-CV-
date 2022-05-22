@@ -33,26 +33,6 @@ if (isset($_GET['name']) && is_string($_GET['name'])) {
                     'email' => $email
                 ]),
             ];
-
-        }
-    }
-    elseif ($_GET['name'] === 'get-comments') {
-        $comment_manager = new DB('comments');
-        $outpout = [
-            'status' => true,
-            'comments' =>$comment_manager->getAll()
-        ];
-    }
-
-    elseif ($_GET['name'] === 'delete-comment') {
-        if (isset($_POST['id']) && is_string($_POST['id'])) {
-            $comment_manager = new DB('comments');
-            $id = (int) $_POST['id'];
-
-            $outpout = [
-                'status' => $comment_manager->deleteEntry($id),
-                'id' => $id,
-            ];
         }
     }
 }
