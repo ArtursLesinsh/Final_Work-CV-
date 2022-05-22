@@ -26,14 +26,14 @@
     <main>
 
         <!-- About me -->
-
+       
         <section class="about_me">
+          <h1>Something about me</h1>
             <div class="about_text">
-                  <h1>Something about me</h1>
-                  <div class="photo">
-                    <img class="my_photo" src="images/me.png" alt="">
-                  </div>
-                <div class="my_text">
+              <div class="photo">
+                <img class="my_photo" src="images/me.png" alt="">
+              </div>
+              <div class="my_text">
                 <p>I was born in Riga, in 1990, and all my life I live here and don’t have any palns for changing living place.
                     In my early 30th years, I decided to change not only job, but profession, because my previous job didn’t gave me any satisfaction.
                     Why I choose exactly it WEB-development? I just sow on YouTube some video about how WEB-page was made, and I really liked the idea, that basically,
@@ -42,7 +42,7 @@
                     What else I can say, according to the horoscope I’m Aquarius,I don’t know if this information will have some meaning here. 
                     What else, my mom said, that I’m most beautiful boy in the world, but I have brother who is married, so obviously she lied to one of us, and i know for sure, it was me.
                     Information about my hobbies, education and work experience you will see bellow.</p>  
-                  </div>
+               </div>
             </div>
         </section>
 
@@ -175,7 +175,7 @@
           <form action="api.php?name=add-comment" id="comments_form">
               <input type="text" name="author" placeholder="Name" required>
               <input type="email" name="email" placeholder="Email" required>
-              <textarea name="phone_number" rows="1" placeholder="Phone number" required></textarea>
+              <input type="tel" name="phone_number" placeholder="Phone number" required>
               <textarea name="message" rows="5" placeholder="Comment Message" required></textarea>
               <button type="submit">comment</button>
           </form>

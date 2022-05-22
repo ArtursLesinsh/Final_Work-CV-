@@ -38,7 +38,7 @@ p {
     max-width: pxToRem(1100);
     margin: auto;
     height: pxToRem(70);
-    background-color: #88CC88;
+    background-color: #2D882D;
 }
 
 .logo {
@@ -60,8 +60,11 @@ p {
 }
 
 .top_button:hover {
-    text-decoration: underline;
-    color: rgb(136, 9, 9);
+    background: #801515;
+    border: 1px solid;
+    border-radius: pxToRem(5);
+    padding: pxToRem(5);
+    color: #ffff;
     transition: .4s;
 }
 section, footer {
@@ -69,25 +72,36 @@ section, footer {
   padding: pxToRem(70) pxToRem(15);
   box-sizing: border-box;
   margin: auto;
-  background: #FFE09C;
+  background: #AA9739;
   padding: pxToRem(20) pxToRem(20);
 }
 
 /* -- About me -- */
 
 .about_me {
-    display: flex;
-    align-items: center;
+  flex-direction: column;
+  display: flex;
+  }
+
+.about_text {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
 }
 
 .my_photo {
-  padding: 0 0 0 pxToRem(20);
+  margin: pxToRem(20);
   float: right;
 }
 .my_text {
-
+  max-width: pxToRem(376);
+  width: 100%;
+  border: 1px solid rgb(100, 87, 126);
+  border-radius: pxToRem(10);
   background: #7180AC;
   text-align: left;
+  margin: pxToRem(20);
+  padding: 0 pxToRem(10);
 }
 /* -- Hobbies -- */
 
@@ -114,6 +128,8 @@ section, footer {
   .hobbies_text {
     padding: pxToRem(10);
     background: #7180AC;
+    border: 1px solid rgb(100, 87, 126);
+    border-radius: pxToRem(10);
     text-align: center;
   }
 
@@ -136,7 +152,8 @@ section, footer {
 
   .education_content {
     background: #7180AC;
-    border: 1px solid #7180AC;
+    border: 1px solid rgb(100, 87, 126);
+    border-radius: pxToRem(10);
     display: flex;
     width: 45%;
     flex-wrap: wrap;
@@ -168,7 +185,8 @@ section, footer {
 
   .work_experiance {
     background: #7180AC;
-    border: 1px solid #7180AC;
+    border: 1px solid rgb(100, 87, 126);
+    border-radius: pxToRem(10);
     margin: pxToRem(10);
   }
   
@@ -186,33 +204,27 @@ form {
     margin:auto;
     max-width:pxToRem(400);
     padding:pxToRem(16);
+    border: 1px solid #AA9739;
     border-radius: pxToRem(5);
     margin-bottom: pxToRem(20);
 }
-input[type=text], textarea {
-    margin-bottom:pxToRem(20);
-    background: #fff6c2;
-    border: 3px solid rgb(237, 209, 31);
-    border-radius: pxToRem(5);
-    padding:pxToRem(8);
-    font-family: Cousine;
-}
-input[type=email], textarea {
+
+input, textarea {
   margin-bottom:pxToRem(20);
   background: #fff6c2;
-  border: 3px solid rgb(237, 209, 31);
+  border: 3px solid #AA9739;
   border-radius: pxToRem(5);
   padding:pxToRem(8);
   font-family: Cousine;
 }
 
 #comments_form textarea {
-    resize: vertical;
+    resize: none;
     font-family: Cousine;
 }
 
 button {
-    background: rgb(237, 209, 31);
+    background: #AA9739;
     border-radius: pxToRem(5);
     border:0;
     padding:pxToRem(8);
@@ -276,13 +288,15 @@ button {
 }
 
 .message_block {
-  background: #ffff;
+  border: 1px solid #AA9739;
+  border-radius: pxToRem(10);
+  background: #7180AC;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  width: 500px;
-  height: 200px;
+  width: pxToRem(500);
+  height: pxToRem(200);
 }
 
 /* Show message function end */
@@ -305,6 +319,13 @@ button {
   }
 
   /* -- Media -- */
+
+  @media only screen and (max-width: 855px) {
+    .my_text {
+      max-width: pxToRem(976);
+      width: 100%;
+  }
+  }
 
   @media only screen and (max-width: 780px) { 
     .top_menu > .top_navigation {

@@ -48,10 +48,4 @@ class DB
 
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-
-    public function deleteEntry(int $id) {
-        $sql = "DELETE FROM " . $this->table_name . " WHERE id=" . $id;
-
-        return ($this->conn->query($sql) === true);
-    }
 }
