@@ -53,7 +53,7 @@ p {
     font-size: pxToRem(16);
     font-weight: 400;
     line-height: pxToRem(27);
-    color: black;
+    color: #801515;
     text-transform: uppercase;
     text-decoration: none;;
     padding: 0px pxToRem(5);
@@ -307,7 +307,7 @@ button {
     display: inline-block;
     width: pxToRem(30);
     height: pxToRem(30);
-    color: white;
+    color: #801515;
     text-align: center;
     vertical-align: middle;
     padding: pxToRem(12) 0 0 0;
@@ -334,16 +334,20 @@ button {
     .toggle {
       display: flex;
       cursor: pointer;
+      color: #801515;
+      
     }
     .toggle::before {
-      content: url(images/icons/list.png);
+      content: url(images/icons/list_red.png);
       margin: auto;
       padding-right: pxToRem(10);
+      
     }
+   
     .toggle.open::before {
-      content: url(images/icons/cancel32.png);
+      content: url(images/icons/cancel.png);
     }
-
+  
     .toggle.open > h2{
       display: none;
     }
@@ -390,7 +394,8 @@ button {
       align-items: center;
     }
     .toggle::before {
-      content: url(images/icons24px/list24.png);
+      content: url(images/icons24px/list_red24.png);
+      
     }
     .toggle.open::before {
       content: url(images/icons24px/cancel24.png);
