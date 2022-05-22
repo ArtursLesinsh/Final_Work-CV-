@@ -1,11 +1,6 @@
 const form = document.getElementById('comments_form');
 const comment_block = document.querySelector('.comments');
-
-xhttp.get('api.php?name=get-comments', function (response) {
-    for (let comment of response.comments) {
-        addComment(comment.id, comment.author, comment.message, comment.phone_number, comment.email);
-    }
-});
+const popup = document.querySelector('.popup');
 
 form.onsubmit = function (event) {
     event.preventDefault();
@@ -14,6 +9,7 @@ form.onsubmit = function (event) {
 
 function submitForm (form) {
     xhttp.postForm(form, function (response) {});
+    popup.style.display = 'flex';
 }
 
 let alt_is_down = false;
@@ -35,4 +31,8 @@ form.querySelector('textarea').onkeyup = function (event) {
             this.value += '\n';
         }
     }
+};
+
+popup.onclick = function(event) {
+        this.style.display = 'none';
 };

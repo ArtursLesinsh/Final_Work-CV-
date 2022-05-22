@@ -178,9 +178,6 @@ section, footer {
     display:none;
 }
 
-.delete {
-  font-size: pxToRem(12);
-}
 
 form {
     background: #7180AC;
@@ -221,19 +218,6 @@ button {
     padding:pxToRem(8);
     font-family: Cousine;
 }
-
-.comment_first_block {
-    display:flex;
-    justify-content:space-between;
-    margin-bottom: pxToRem(32);
-
-    .message {
-        margin:0;
-        white-space: pre;
-        font-size: pxToRem(12);
-    }
-}
-
 
 .comments {
     background: #7180AC;
@@ -276,6 +260,32 @@ button {
   color: #000000;
   font-family: Cousine;
 }
+
+/* Show message function start */
+
+.popup {
+  display: none;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.message_block {
+  background: #ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 500px;
+  height: 200px;
+}
+
+/* Show message function end */
 
 
 /* -- Arrow -- */
